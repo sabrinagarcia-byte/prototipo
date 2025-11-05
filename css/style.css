@@ -5,7 +5,7 @@
     --white: #fff;
     --black: #000;
     --data: #777;
-    --gradienteAzul: linear-gradient(to right , #05008B, #0700D7);
+    --gradienteAzul: linear-gradient(to right, #05008B, #0700D7);
     --gradienteCinza: linear-gradient(to right, #EFEFEF, #A3A3A3);
     --gradienteSaibamais: linear-gradient(to right, #64A8FB, #0700D9);
 
@@ -33,7 +33,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--header);
+    background-color: var(--nav);
     padding: 10px 40px;
     flex-wrap: wrap;
 }
@@ -93,39 +93,56 @@ nav a:hover {
 
 /* ---------- HERO SECTION ---------- */
 .hero {
-    background: url('../img/banner.png') center/cover no-repeat;
-    height: 70vh;
     position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
 }
 
 .overlay {
-    background: rgba(0, 0, 0, 0.5);
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 20px;
 }
 
 .text-content {
+    position: relative;
+    margin-top: 60vh;
     color: var(--white);
+    text-align: left;
+
 }
 
 .text-content h1 {
+    color: var(--black);
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .text-content span {
-    color: var(--ciano);
+    color: var(--nav);
     font-weight: 700;
 }
 
 .text-content p {
     margin-bottom: 20px;
     font-size: 1rem;
+    color: var(--black);
 }
 
 .cta {
@@ -160,7 +177,7 @@ nav a:hover {
 }
 
 .item {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 10px;
     border-radius: 8px;
 }
@@ -176,51 +193,34 @@ nav a:hover {
     color: var(--ciano);
 }
 
+.icone {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: brightness(0), invert(1);
+}
+
 .rodape {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    text-align: center;
     justify-content: right;
+    gap: 10px;
 }
 
 .acao {
-    background-color: var(--white);
+    background: var(--gradienteCinza);
     color: var(--nav);
     border: none;
     border-radius: 6px;
     padding: 10px 18px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 790;
     transition: 0.3s;
 }
 
 .acao:hover {
-    background-color: var(--header);
-    color: var(--white);
-}
-
-/* ---------- RESPONSIVIDADE ---------- */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    .hero {
-        height: 60vh;
-    }
-
-    .text-content h1 {
-        font-size: 1.6rem;
-    }
+    opacity: 0.85;
 }
 
 .body2 {
@@ -228,7 +228,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px    ;
+    padding: 20px;
 }
 
 .container {
@@ -286,6 +286,7 @@ h1 span {
     display: flex;
     justify-content: center;
 }
+
 .noticias-container {
     max-width: 800px;
     width: 100%;
@@ -424,4 +425,3 @@ hr {
 .redes-sociais img:hover {
     transform: scale(1.1);
 }
-
