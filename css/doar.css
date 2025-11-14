@@ -208,7 +208,7 @@ input:focus {
     box-shadow: 0 5px 15px var(--black);
 }
 
-button:hover {
+.donate:hover {
   background: var(--gradienteCinza);
   color: var(--black);
   box-shadow: 0 5px 15px var(--black);
